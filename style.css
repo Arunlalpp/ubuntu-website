@@ -1,1 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav-bar {
+    width: 100%;
+    background: #262626;
+}
 
+.nav-content {
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-content svg {
+    fill: #fff;
+}
+.nav-left
+{
+    color: #f7f7f7;
+    padding: 0.375rem 0.5rem;
+    margin-bottom: 0;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-right: 0.6rem;
+}
+.nav-left span 
+{
+    padding: 0.375rem 0.5rem;
+}
+.nav-left img 
+{
+    width: 0.6rem;
+}
+.down-arrow  svg
+{
+    content: "";
+    height: 0.5rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.75rem;
+}
+.nav-bar-ubuntu
+{
+    width: 100%;
+    background-color: #333333;
+}
+.ubuntu-nav
+{
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.ubuntu-nav li
+{
+    list-style: none;
+    text-decoration: none;
+    color: #f7f7f7;
+    display: block;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.ubuntu-nav svg
+{
+    fill: #fff;
+    background: #e95420;
+    height: 3.5rem;
+}
+.nav-link
+{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.nav-link li
+{
+    padding: 1rem 2rem 1rem 1rem;
+    color: #f7f7f7;
+    display: block;
+    line-height: 1.5rem;
+}
+.nav-link li,img
+{
+    top: 0.6rem;
+}
