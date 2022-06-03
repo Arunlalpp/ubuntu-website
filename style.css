@@ -442,6 +442,53 @@ a {
 {
     background-color: #e95420;
     height: 0.1875rem;
+    margin: 0;
+    margin-top: 4rem;
+}
+.sec
+{
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 0;
+}
+.ubuntu-footer
+{
+    display: flex;
+    justify-content: space-between;
+}
+.container-footer ul span 
+{
+    font-size: 13px;
+    color: #111;
+    margin: 1rem 0;
+    font-weight: 600 !important;
+}
+.container-footer ul span:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.container-footer ul
+{
+    list-style: none;
+    display: block;
+}
+.container-footer ul li
+{
+    font-size: 13px;
+    color: #111;
+    margin: 1rem 0;
+}
+.container-footer ul li:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.bottom-lines hr
+{
+    margin: 0;
+    padding: 0;
+    margin-top: 1rem;
 }
 @media screen and (max-width: 760px) {
 
