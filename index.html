@@ -1,6 +1,844 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="nav-content">
+            <svg width="75" height="10">
+                <g fill="#fff">
+                    <path
+                        d="M4.409 9.79a4.815 4.815 0 0 1-1.799-.323 3.785 3.785 0 0 1-1.393-.951 4.321 4.321 0 0 1-.899-1.53C.106 6.382 0 5.69 0 4.907c0-.782.117-1.476.351-2.083a4.427 4.427 0 0 1 .96-1.53c.4-.41.878-.731 1.407-.946a4.459 4.459 0 0 1 1.69-.323 6.615 6.615 0 0 1 1.921.27c.195.057.385.129.568.216.144.072.243.125.298.161l-.393 1.08a2.099 2.099 0 0 0-.351-.176 6.577 6.577 0 0 0-.535-.189 5.126 5.126 0 0 0-.67-.155 4.704 4.704 0 0 0-.77-.06c-.46 0-.88.085-1.257.256-.377.17-.71.423-.974.742-.27.323-.48.717-.629 1.18-.149.463-.223.982-.223 1.557 0 .558.065 1.066.196 1.524.13.459.329.852.595 1.18.265.328.603.589.987.762.393.18.854.27 1.386.27.596 0 1.09-.063 1.481-.189.393-.126.688-.238.886-.337l.338 1.079a1.87 1.87 0 0 1-.338.169 4.615 4.615 0 0 1-.609.195 7.74 7.74 0 0 1-1.906.23zm8.33-9.548c.325.675.636 1.356.933 2.043.31.718.61 1.44.9 2.165.301.755.61 1.553.926 2.394.315.84.653 1.755 1.014 2.744h-1.433a37.938 37.938 0 0 1-.433-1.2c-.137-.4-.277-.8-.42-1.2H9.98l-.852 2.4H7.762c.333-.916.671-1.831 1.014-2.744.3-.801.609-1.6.926-2.394.29-.726.59-1.447.9-2.165.297-.688.608-1.369.933-2.043h1.204zm-.636 1.497a35.094 35.094 0 0 0-.899 2.104 75.02 75.02 0 0 0-.845 2.28h3.489c-.28-.76-.566-1.518-.859-2.273a40.365 40.365 0 0 0-.886-2.11zm12.158 7.85a75.23 75.23 0 0 0-.683-1.12c-.27-.434-.547-.864-.832-1.288a81.364 81.364 0 0 0-.926-1.356 58.91 58.91 0 0 0-1.873-2.535c-.267-.34-.542-.673-.825-.998v7.296h-1.285V.242h1.041c.473.506.927 1.03 1.36 1.571.489.607.967 1.223 1.433 1.848.473.634.92 1.256 1.339 1.868.368.534.723 1.078 1.061 1.632V.242h1.285v9.346h-1.095zm20.472 0a50.642 50.642 0 0 0-.683-1.12 49.404 49.404 0 0 0-.829-1.288 74.62 74.62 0 0 0-1.88-2.684 53.44 53.44 0 0 0-.92-1.207c-.266-.34-.541-.672-.824-.998v7.296H38.31V.242h1.042c.473.507.926 1.03 1.359 1.571a61.88 61.88 0 0 1 2.772 3.716c.37.533.723 1.077 1.06 1.632V.242h1.285v9.346h-1.096zM48.212.241h1.312v9.346h-1.312V.242zm7.72 9.548a4.83 4.83 0 0 1-1.798-.323 3.794 3.794 0 0 1-1.394-.951 4.374 4.374 0 0 1-.9-1.53c-.212-.603-.318-1.295-.318-2.078 0-.782.118-1.476.354-2.084.235-.606.553-1.117.962-1.53A4.09 4.09 0 0 1 54.243.35a4.449 4.449 0 0 1 1.689-.324 6.55 6.55 0 0 1 1.92.27c.236.072.424.144.57.216.145.072.243.125.298.161l-.393 1.08a2.18 2.18 0 0 0-.353-.176 6.4 6.4 0 0 0-.534-.189 4.955 4.955 0 0 0-1.441-.215c-.46 0-.876.085-1.257.256-.377.17-.71.424-.974.742a3.47 3.47 0 0 0-.628 1.18c-.15.463-.224.982-.224 1.557 0 .558.067 1.066.197 1.524.13.459.33.852.596 1.18.264.329.593.583.986.762.393.18.856.27 1.386.27.597 0 1.088-.063 1.48-.189a6.72 6.72 0 0 0 .888-.337l.338 1.08c-.063.044-.177.1-.338.168a4.687 4.687 0 0 1-.609.195 7.714 7.714 0 0 1-1.912.23h.004zM64.264.242c.322.674.633 1.355.931 2.043.298.688.597 1.41.9 2.165.302.755.612 1.553.926 2.394.314.84.656 1.755 1.013 2.744h-1.433a46.262 46.262 0 0 1-.432-1.2 65.234 65.234 0 0 0-.42-1.2h-4.245l-.852 2.4h-1.367c.362-.989.7-1.903 1.013-2.744a98.141 98.141 0 0 1 1.826-4.559c.299-.688.609-1.369.935-2.043h1.205zm-.636 1.497a32.5 32.5 0 0 0-.899 2.104c-.287.728-.57 1.488-.848 2.28h3.49c-.29-.783-.576-1.54-.86-2.273a39.37 39.37 0 0 0-.883-2.11zM75 8.496v1.092h-5.639V.242h1.312v8.254H75zm-43.165-.479a3.113 3.113 0 0 1-3.118-3.109A3.113 3.113 0 0 1 31.835 1.8a3.113 3.113 0 0 1 3.117 3.108 3.113 3.113 0 0 1-3.117 3.11z">
+                    </path>
+                    <path
+                        d="M36.73 4.908a4.889 4.889 0 0 1-4.896 4.882 4.889 4.889 0 0 1-4.895-4.882A4.889 4.889 0 0 1 31.834.026a4.89 4.89 0 0 1 4.896 4.882zm-4.895-3.694a3.7 3.7 0 0 0-3.705 3.694 3.7 3.7 0 0 0 3.705 3.695 3.7 3.7 0 0 0 3.704-3.695 3.7 3.7 0 0 0-3.705-3.694z">
+                    </path>
+                </g>
+            </svg>
+            <div class="nav-left">
+                <span>We are hiring</span>
+                <span>Products</span>
+                <img
+                    src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath fill='%23f7f7f7' d='m8.187 11.748 6.187-6.187-1.06-1.061-5.127 5.127L3.061 4.5 2 5.561z'/%3E%3C/svg%3E">
+            </div>
+        </div>
+    </div>
+    <div class="nav-bar-ubuntu">
+        <div class="ubuntu-nav">
+            <div class="logo">
+                <svg class="p-navigation__image" width="80px" height="32px" viewBox="0 0 107 32" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="ubuntu-logo">
+                        <path
+                            d="M100.470409,13.7615448 C96.9385448,13.7615448 94.0754031,10.8982838 94.0754031,7.36627238 C94.0754031,3.83426097 96.9385448,0.971 100.470409,0.971 C104.002273,0.971 106.865415,3.83426097 106.865415,7.36627238 C106.865415,10.8982838 104.002273,13.7615448 100.470409,13.7615448 Z M96.479398,6.59820047 C96.0559273,6.59820047 95.7123568,6.9417853 95.7123568,7.36727117 C95.7123568,7.78976066 96.0559273,8.13434429 96.479398,8.13434429 C96.9038674,8.13434429 97.2504342,7.78976066 97.2504342,7.36727117 C97.2504342,6.9417853 96.9038674,6.59820047 96.479398,6.59820047 Z M101.966539,10.0919788 C101.601995,10.3017254 101.475153,10.7731557 101.684891,11.1377152 C101.898624,11.5092663 102.369036,11.6341154 102.73358,11.4213725 C103.103118,11.2116259 103.22996,10.7401956 103.015228,10.3726397 C102.803493,10.0030862 102.334079,9.87823709 101.966539,10.0929776 L101.966539,10.0919788 Z M98.1493106,7.36727117 C98.1493106,6.6081884 98.5268386,5.93500183 99.104117,5.52949182 L98.5428187,4.58762991 C97.8686614,5.03708681 97.3682869,5.72425648 97.1605465,6.52828495 C97.4062394,6.72804357 97.5580496,7.02768151 97.5580496,7.36727117 C97.5580496,7.70386446 97.4062394,8.00649877 97.1605465,8.20425981 C97.3682869,9.00828828 97.8696601,9.69445915 98.5428187,10.1419185 L99.104117,9.20305294 C98.5268386,8.79754293 98.1493106,8.12435636 98.1493106,7.36727117 Z M100.392506,5.11998664 C101.568037,5.11998664 102.529835,6.02089804 102.62971,7.16951013 L103.726339,7.14953427 C103.671408,6.30555408 103.30187,5.54147734 102.73358,4.98714716 C102.438948,5.09501681 102.100372,5.08003492 101.809735,4.90924129 C101.518099,4.74144405 101.337325,4.4577868 101.286389,4.15015852 C101.001745,4.07225265 100.703118,4.03030334 100.392506,4.03030334 C99.8631682,4.03030334 99.3617949,4.15415369 98.9143542,4.37388818 L99.4486863,5.33073199 C99.735328,5.19589492 100.057925,5.12098543 100.392506,5.12098543 L100.392506,5.11998664 Z M100.392506,9.61155932 C100.056926,9.61155932 99.735328,9.53565105 99.4486863,9.40181277 L98.9143542,10.3586566 C99.3607962,10.5783911 99.8631682,10.7022414 100.392506,10.7022414 C100.704117,10.7022414 101.001745,10.6622897 101.286389,10.5823862 C101.336327,10.2727604 101.518099,9.98810433 101.809735,9.82130588 C102.103368,9.65350864 102.438948,9.63553036 102.73358,9.74839398 C103.302868,9.18607345 103.670409,8.42599188 103.726339,7.5810129 L102.62971,7.56503221 C102.529835,8.71064793 101.568037,9.61056053 100.392506,9.61056053 L100.392506,9.61155932 Z M101.966539,4.64156473 C102.334079,4.85430767 102.803493,4.72945853 103.015228,4.35990507 C103.22996,3.993348 103.103118,3.52091885 102.735578,3.30917471 C102.370035,3.09942815 101.899623,3.22427729 101.686888,3.59183316 C101.474154,3.95839024 101.600996,4.4288218 101.966539,4.64056594 L101.966539,4.64156473 Z M12.7910109,24.1489933 C12.1418224,24.3107977 11.2828961,24.4855865 10.2172282,24.6663681 C9.15056154,24.850146 7.91610464,24.942035 6.5178525,24.942035 C5.29737813,24.942035 4.27365781,24.7642498 3.43970028,24.4086795 C2.60774025,24.0541079 1.93857672,23.551715 1.4322097,22.9005019 C0.922846416,22.2512863 0.558302106,21.4842132 0.335580515,20.6032777 C0.109862669,19.7153506 0,18.7385309 0,17.6598343 L0,8.76857793 L2.83146059,8.76857793 L2.83146059,17.0515693 C2.83146059,18.9822364 3.13508106,20.3635673 3.746317,21.1945632 C4.35555543,22.0275567 5.38127325,22.4430546 6.82247172,22.4430546 C7.12609218,22.4430546 7.44169767,22.4330667 7.76629191,22.4110932 C8.09188491,22.3911174 8.39750288,22.3661475 8.67915081,22.3361837 C8.96279625,22.3062199 9.22247165,22.2762561 9.45617951,22.2462924 C9.68988736,22.214331 9.85568012,22.1813708 9.95955028,22.1384227 L9.95955028,8.76857793 L12.7910109,8.76857793 L12.7910109,24.1499921 L12.7910109,24.1489933 Z M19.7033702,9.46773311 C20.049937,9.24600104 20.5722841,9.01028586 21.2734076,8.76857793 C21.9725337,8.5258712 22.7785262,8.40202085 23.6943813,8.40202085 C24.8299618,8.40202085 25.8396996,8.60777223 26.7235947,9.01128466 C27.6084886,9.41679466 28.3535572,9.98710554 28.9637944,10.7192209 C29.5700366,11.4483399 30.0324586,12.3212851 30.3470653,13.3360589 C30.6636695,14.3518315 30.8204735,15.469481 30.8204735,16.6880086 C30.8204735,17.9664638 30.6327082,19.1180723 30.2551802,20.1438328 C29.8786508,21.1685946 29.3463163,22.0365458 28.6571777,22.7466877 C27.9660416,23.459826 27.1350804,24.005167 26.1583014,24.3917 C25.1865161,24.7782329 24.0908857,24.971 22.8694126,24.971 C21.5490631,24.971 20.3825213,24.8781122 19.366791,24.6953331 C18.3520594,24.512554 17.5191006,24.328776 16.8699121,24.1459969 L16.8699121,1.45940984 L19.7023715,0.971998793 L19.7023715,9.46773311 L19.700374,9.46773311 L19.7033702,9.46773311 Z M20.9078646,22.3661475 C21.4242191,22.4390594 22.0664163,22.4730184 22.8404488,22.4730184 C24.3605486,22.4730184 25.5820217,21.9686279 26.4938819,20.9648408 C27.4077395,19.9590561 27.8651677,18.5327795 27.8651677,16.686011 C27.8651677,15.8739922 27.7852676,15.1129119 27.6214724,14.4007724 C27.4586759,13.6896317 27.1940067,13.0763727 26.8294624,12.557999 C26.4639193,12.0386266 25.9905111,11.636113 25.4152302,11.3394714 C24.8339568,11.0438287 24.1388258,10.8970061 23.3278395,10.8970061 C22.5548058,10.8970061 21.8456923,11.0298456 21.195505,11.2915294 C20.5463165,11.5582071 20.0469408,11.8308776 19.7023715,12.1155337 L19.7023715,22.1354263 C19.9880144,22.2203237 20.3885138,22.296232 20.9078646,22.3661475 Z M46.6257165,24.1489933 C45.976528,24.3107977 45.1176017,24.4855865 44.0529326,24.6663681 C42.9872647,24.850146 41.7528078,24.942035 40.3505606,24.942035 C39.1340813,24.942035 38.1083635,24.7642498 37.2764034,24.4086795 C36.4444434,24.0541079 35.7742811,23.551715 35.2689128,22.9005019 C34.7575521,22.2512863 34.3940065,21.4842132 34.1702862,20.6032777 C33.9475646,19.7173482 33.8367032,18.7395297 33.8367032,17.6618319 L33.8367032,8.77057551 L36.6681637,8.77057551 L36.6681637,17.0535669 C36.6681637,18.984234 36.9717842,20.3655649 37.5810226,21.1965608 C38.1902611,22.0295542 39.2149802,22.4450522 40.6571774,22.4450522 C40.9617966,22.4450522 41.2784008,22.4350643 41.6029951,22.4130908 C41.9275893,22.3931149 42.2322085,22.3681451 42.5168527,22.3381813 C42.7994994,22.3082175 43.0591748,22.2782537 43.2938814,22.2482899 C43.5255918,22.2153298 43.693382,22.1823696 43.7962534,22.1384227 L43.7962534,8.77057551 L46.6287128,8.77057551 L46.6287128,24.1519896 L46.6267153,24.1519896 L46.6257165,24.1489933 Z M50.7066153,9.22602518 C51.3558038,9.06222311 52.2177263,8.89142948 53.2953793,8.70665275 C54.3710347,8.52686999 55.6084878,8.43398223 57.010735,8.43398223 C58.2711594,8.43398223 59.3148547,8.61176741 60.1468148,8.96633897 C60.9807723,9.32190932 61.6449421,9.8183095 62.1423203,10.4585359 C62.6396986,11.0977635 62.9912591,11.8648366 63.1940057,12.7557601 C63.3957535,13.6526763 63.4976262,14.6354887 63.4976262,15.7121877 L63.4976262,24.6054417 L60.6641681,24.6054417 L60.6641681,16.3214515 C60.6641681,15.3456307 60.5982505,14.513636 60.467414,13.8244687 C60.3355788,13.1313063 60.117851,12.5759773 59.812233,12.1494927 C59.5096113,11.7200116 59.1011219,11.4123833 58.5937561,11.220615 C58.0873891,11.0238528 57.4551794,10.9289675 56.7061157,10.9289675 C56.4014965,10.9289675 56.0868898,10.9419518 55.764293,10.9619276 C55.4387,10.9819035 55.1280883,11.0078721 54.8354541,11.0378359 C54.5358287,11.0677997 54.2761533,11.1037563 54.0414466,11.143708 C53.8057413,11.1836597 53.6389498,11.2156211 53.5380759,11.2335994 L53.5380759,24.6044429 L50.7066153,24.6044429 L50.7066153,9.22602518 Z M70.0444424,8.76857793 L76.0449416,8.76857793 L76.0449416,11.143708 L70.0444424,11.143708 L70.0444424,18.4548737 C70.0444424,19.2439202 70.106365,19.9031237 70.2292115,20.4175021 C70.3490617,20.9368746 70.5328319,21.3443822 70.7765273,21.6380273 C71.0202227,21.9296749 71.3258407,22.1374239 71.6893862,22.262273 C72.0549293,22.3841258 72.4813962,22.4440534 72.9677882,22.4440534 C73.8396983,22.4440534 74.5298356,22.3471705 75.0401976,22.1544034 C75.5465646,21.9606375 75.8921327,21.8248017 76.0739054,21.7419018 L76.6831439,24.0591019 C76.3994984,24.2009305 75.8961277,24.3827108 75.1750291,24.6054417 C74.455928,24.8301702 73.6389492,24.9430338 72.7250916,24.9430338 C71.6484374,24.9430338 70.7595485,24.8061991 70.058425,24.5305322 C69.3592989,24.2548653 68.796003,23.8453601 68.3705349,23.2970227 C67.9430692,22.7496841 67.6434438,22.0744999 67.4716585,21.2724691 C67.2978757,20.4684406 67.2119831,19.5405618 67.2119831,18.4858362 L67.2119831,4.35191473 L70.0424449,3.8625061 L70.0424449,8.77057551 L70.0444424,8.77057551 L70.0444424,8.76857793 Z M91.4556778,24.1489933 C90.803493,24.3107977 89.947563,24.4855865 88.8788988,24.6663681 C87.8142297,24.850146 86.5817703,24.942035 85.1835182,24.942035 C83.9630438,24.942035 82.9393235,24.7642498 82.1073634,24.4086795 C81.2714084,24.0541079 80.6022449,23.551715 80.0958779,22.9005019 C79.5865146,22.2512863 79.2239678,21.4842132 78.9972512,20.6032777 C78.7775258,19.7173482 78.6626694,18.7395297 78.6626694,17.6618319 L78.6626694,8.77057551 L81.4991238,8.77057551 L81.4991238,17.0535669 C81.4991238,18.984234 81.8027442,20.3655649 82.4109839,21.1965608 C83.0202223,22.0295542 84.0459402,22.4450522 85.4871386,22.4450522 C85.7917578,22.4450522 86.1063646,22.4350643 86.4319576,22.4130908 C86.7535556,22.3931149 87.0591735,22.3681451 87.3438177,22.3381813 C87.6274632,22.3082175 87.8891361,22.2782537 88.1198477,22.2482899 C88.3535555,22.2153298 88.5223445,22.1823696 88.6242172,22.1384227 L88.6242172,8.77057551 L91.4576753,8.77057551 L91.4576753,24.1519896 L91.4556778,24.1519896 L91.4556778,24.1489933 Z"
+                            fill="#FFFFFF" fill-rule="nonzero"></path>
+                    </g>
+                </svg>
+            </div>
+            <ul class="nav-link">
+                <li>Enterprise</li>
+                <li>Developer</li>
+                <li>Community</li>
+                <li>Download</li>
+            </ul>
+            <div class="nav-right">
+                <span>Search</span>
+                <span>Sign in</span>
+            </div>
+        </div>
+    </div>
+    <div class="ubuntu-banner">
+        <div class="banner-content">
+            <div class="banner-text">
+                <p>What’s new in Charmed Ceph and Quincy in the Ubuntu 22.04 LTS release?</p>
+                <button>Register Now</button>
+            </div>
+            <div class="banner-visual">
+                <img src="https://assets.ubuntu.com/v1/c0022d08-Software-defined-storage.svg" width="250px"
+                    height="250px">
+            </div>
+        </div>
+    </div>
+    <div class="centosuser">
+        <div class="user-image">
+            <img src="https://assets.ubuntu.com/v1/89451f56-centos.png">
+            <a href="#">CentOS users, 6 things to know when considering a migration to Ubuntu LTS ›</a>
+        </div>
+        <section>
+            <div class="modern-eterprise">
+                <div class="container-content">
+                    <h1>Modern enterprise open source</h1>
+                    <p>Publisher of Ubuntu.
+                        <br>
+                        Security. Support. Managed Services.
+                    </p>
+                    <button>Contact Canonical</button>
+                </div>
+                <div class="container-logos">
+                    <ul>
+                        <li>
+                            <img src="https://assets.ubuntu.com/v1/83ff4203-awshp-strip-customers.png">
+                        </li>
+                        <li><img src="https://assets.ubuntu.com/v1/7c601cb9-azurehp-strip-customers.png"></li>
+                        <li><img src="https://assets.ubuntu.com/v1/5ba04ee8-atthp-strip-customers.png"></li>
+                        <li><img src="https://assets.ubuntu.com/v1/fdb8126b-google+cloudhp-strip-customers.png"></li>
+                        <li><img src="https://assets.ubuntu.com/v1/3faca6ca-netflixhp-strip-customers.png"></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </section>
+    </div>
+    <div class="container">
+        <div class="ubuntu-news">
+            <h3>Latest news from <a href="#">our blog &nbsp;</a></h3>
+        </div>
+        <div class="wrapper-conatiner">
+            <div>
+                <p>2 June 2022</p>
+                <h2><a href="#">Private cloud: Avoiding the high cost of operations</a></h2>
+            </div>
+            <div>
+                <p>31 MAY 2022</p>
+                <h2><a href="#">Advantech MIC-770 V2 Certified <br>on Ubuntu 20.04 LTS to Ensure Reliable AIoT
+                        Applications</a></h2>
+            </div>
+            <div>
+                <p>30 MAY 2022</p>
+                <h2><a href="#">Embedded Linux development on Ubuntu – Part III</a></h2>
+            </div>
+            <div class="hr">
+                <p>SPOTLIGHT</p>
+                <h2><a href="#">Embedded World 2022: Sessions with Canonical</a></h2>
+            </div>
+        </div>
+    </div>
+    <article>
+        <div class="container-energies">
+            <div class="container-cardbox">
+                <div class="better-security">
+                    <h1>Energise your engineers</h1>
+                    <p>Better security. More packages. Newer tools. All your open source, from <br> cloud to edge.</p>
+                    <h4>66% of experienced developers prefer Ubuntu.</h4>
+                    <h4>That’s why Ubuntu supports the fastest, biggest and most successful digital operations.</h4>
+                    <div class="text-links">
+                        <a href="#">Let’s talk open source › </a>
+                        <a href="#">Watch Ubuntu Masters in action ›</a>
+                    </div>
+                </div>
+                <div class="container-left">
+                    <a href="#">The 2020 HackerEarth Developer Survey</a>
+                    <div>
+                        <img
+                            src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_200,h_40/https://assets.ubuntu.com/v1/934a0626-Hackerearth_logo.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <div class="wrapper-open-source">
+        <div class="inner-container">
+            <span>Open source security</span>
+            <h5>More than Linux.<a href="#">Security and compliance</a> for the full stack.</h5>
+            <p class="source-des">Secure your open source apps. Patch the full stack, from kernel to library and
+                applications, for CVE compliance. Governments and auditors certify Ubuntu for FedRAMP, FISMA and HITECH.
+            </p>
+        </div>
+        <div class="list-content">
+            <ul>
+                <li>10 year security maintenance and CVE Patching</li>
+                <li><a href="#">Kernel Livepatch</a>for 24/7 patching with no downtime</li>
+                <li><a href="#">Extended security</a> for infrastructure and applications</li>
+                <li><a href="#">FIPS 140-2</a>cryptographic modules certified by NIST</li>
+            </ul>
+            <ul>
+                <li><a href="#">Common Criteria EAL2:</a>ISO/IEC IS 15408 validated by CSEC</li>
+                <li><a href="#">DISA/STIG</a> hardening for DoD compliance</li>
+                <li><a href="#">CIS profiles</a>for cyber defence and malware prevention</li>
+            </ul>
+        </div>
+        <div class="list-links">
+            <a href="#">Secure all your open source with us ›</a>
+        </div>
+        <div class="wrapper-logos">
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/a94b7c55-nist-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/d05ddc19-%40sec-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/d16880fe-disa-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/00644094-cis-logo.png" />
+            </div>
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/b3f94804-csec-logo.png" />
+            </div>
+        </div>
+    </div>
+    <div class="significat-wrpapper">
+        <div class="wrapper-open-source">
+            <div class="inner-container">
+                <span>Significant enterprise savings</span>
+                <h5>Sustainable open source at the lowest cost, everywhere.</h5>
+                <p>Rethink what’s possible with Linux and open source.</p>
+                <p class="source-des">Companies engage Canonical to drive down open source operating costs. Automate
+                    everything: multi-cloud operations, bare metal provisioning, edge clusters and IoT.
+                </p>
+            </div>
+            <div class="logo-svg">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_266,h_200/https://assets.ubuntu.com/v1/f129afea-Save+Money-Yen-Euro-Dollar-2020.svg">
+            </div>
+            <div class="list-content">
+                <ul>
+                    <li>No mandatory subscriptions for Ubuntu</li>
+                    <li><a href="#">Security, support</a> and fully managed<a href="#">infra</a>and <a href="#">apps</a>
+                    </li>
+                    <li><a href="#">Public cloud, data centre, edge cluster</a> and <a href="#">appliances</a></li>
+                    <li><a href="#">Long term maintenance commitment</a></li>
+                </ul>
+                <ul>
+                    <li>Transparent pricing for enterprise and ISV</li>
+                    <li><a href="#">Switch from VMware to OpenStack</a></li>
+                    <li><a href="#">TCO analysis of Open Infra</a></li>
+                    <li><a href="#">451 study on private/public cloud costs</a></li>
+                </ul>
+            </div>
+            <div class="list-links">
+                <a href="#">Let’s talk open source ›</a>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper-open-source">
+        <div class="inner-container">
+            <span>Public cloud optimisation</span>
+            <h5>Most public cloud instances are Ubuntu, for performance and security.</h5>
+        </div>
+        <div class="list-content">
+            <ul>
+                <li>Optimised kernels for AWS, Azure, Google, Oracle, IBM</li>
+                <li><a href="#">FIPS, CIS hardening</a>and CVE fixes with Ubuntu Pro</li>
+                <li>Minimise rolling reboots with<a href="#"> Kernel Livepatch</a></li>
+                <li>Network & storage performance optimisation</li>
+                <li>GPU enablement for machines and containers</li>
+            </ul>
+            <ul>
+                <li>Pay-as-you-go billing, no more licenses</li>
+                <li><a href="#">Enterprise support</a>and <a href="#"> Extended Security Maintenance</a></li>
+                <li>Cloud workload migration service</li>
+                <li>Containerisation and cloud-native migration service</li>
+                <li>Fully managed application service</li>
+            </ul>
+        </div>
+        <div class="list-links">
+            <a href="#">Learn more ›</a>
+            <a href="#">Contact us ›</a>
+        </div>
+        <div class="wrapper-logos">
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/f0e4551b-netflix-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/6889bfcb-uber-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/2ef9f6ff-spotify-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/92cf9e91-walmart-logo.png" />
+            </div>
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/2b6c1718-bmp-paribas-logo.png" />
+            </div>
+        </div>
+    </div>
+    <div class="significat-wrpapper">
+        <div class="wrapper-open-source">
+            <div class="inner-container">
+                <span>Carrier-grade private cloud</span>
+                <h4>Operate <a href="#"> private cloud the smart way </a>– supported or<a href="#"> fully managed.</a>
+                </h4>
+            </div>
+            <div class="list-content">
+                <ul>
+                    <li>10 year<a href="#">security maintenance </a>and<a href="#">support</a></li>
+                    <li><a href="#">Hyperconverged</a> or segregated architecture</li>
+                    <li><a href="#">Encryption at rest for GDPR, HIPAA, FedRAMP</a></li>
+                    <li>Wide choice of SDN and storage</li>
+                    <li><a href="#">Upgrades and day-2 operations, automated</a></li>
+                </ul>
+                <ul>
+                    <li>Integrated logging, monitoring and alerting</li>
+                    <li>Platform and infrastructure hardening</li>
+                    <li>High availability</li>
+                    <li><a href="#">Carrier-grade NFVI</a></li>
+                </ul>
+            </div>
+            <div class="list-links">
+                <a href="#">Learn more › </a>
+                <a href="#">Contact us ›</a>
+            </div>
+        </div>
+        <div class="wrapper-logos">
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/bd2a3282-bt-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/c6e197c4-deutsche-telekom-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/6143a8ce-rabobank-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/698f7a58-best-buy-logo.png" />
+            </div>
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/b1e3d2d2-bloomberg-logo.png" />
+            </div>
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/6cd78b57-at%26t-logo.png" />
+            </div>
+        </div>
+    </div>
+    <div class="wrapper-open-source">
+        <div class="inner-container">
+            <span>Multi-cloud Kubernetes and containers</span>
+            <h4><a href="#">AKS. EKS. GKE. </a>Kubeadm<a href="#"> MicroK8s. Charmed Kubernetes. </a>All on Ubuntu.</h4>
+        </div>
+        <div class="list-content">
+            <ul>
+                <li>Support for all public cloud Kubernetes</li>
+                <li>On-prem MicroK8s, Charmed K8s, kubeadm</li>
+                <li><a href="#"> Fully-managed Kubernetes </a> on-prem or public cloud</li>
+                <li><a href="#">Model-driven Kubernetes Operators</a></li>
+                <li>Full stack support for<a href="#">apps, Kubernetes,</a>and<a href="#">OS</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">K8s architecture and deployment consulting</a></li>
+                <li>Cloud-native workload migration services</li>
+                <li><a href="#">Bare metal, OpenStack</a>and VMware</li>
+                <li>Containerisation and cloud-native migration service</li>
+                <li>Pluggable <a href="#">CNIs, CSIs, CRIs and third-party tools</a></li>
+            </ul>
+        </div>
+        <div class="list-links">
+            <a href="#">Learn more ›</a>
+            <a href="#">Contact us ›</a>
+        </div>
+        <div class="wrapper-logos">
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/de681426-aws-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/6ef81e08-microsoft-azure-new-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/d174f7bf-google-cloud-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/d493514f-liberty-global-logo.png" />
+            </div>
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/aed42949-aci-universal-payments-logo.png" />
+            </div>
+        </div>
+    </div>
+    <div class="significat-wrpapper">
+        <div class="wrapper-open-source">
+            <div class="inner-container">
+                <span>Ultra secure things</span>
+                <h4><a href="#"> Ubuntu Core Appliances </a>with transactional updates<a href="#">for a better embedded
+                        Linux.</a></h4>
+            </div>
+            <div class="list-content">
+                <ul>
+                    <li>1OTA compressed updates for apps, kernel and OS</a></li>
+                    <li>Automatic rollback and data snapshots</li>
+                    <li><a href="#">Managed private app stores</a>for secure fleet management</li>
+                    <li>DevSecOps pipeline for edge app delivery</li>
+                    <li>Built-in device recovery and remote disk repair</li>
+                </ul>
+                <ul>
+                    <li>10 year security maintenance for every device</li>
+                    <li>Provable system and software integrity</li>
+                    <li>Secure boot backed by root of trust</li>
+                    <li>Full disk encryption with hardware keys </li>
+                    <li>FIPS certifiable embedded Linux </li>
+                </ul>
+            </div>
+            <div class="list-links">
+                <a href="#">Learn more › </a>
+                <a href="#">Contact us ›</a>
+            </div>
+        </div>
+        <div class="wrapper-logos">
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/67f81bfe-intel-new-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/5e075792-rexroth-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/711be910-arm-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/987acdaa-dell-logo.png" />
+            </div>
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/2b253402-advantech-logo.png" />
+            </div>
+        </div>
+    </div>
+    <div class="wrapper-open-source">
+        <div class="inner-container">
+            <span>Workstations and desktops</span>
+            <h4><a href="#">Optimised AI/ML </a>and cloud devops. The professional developer’s preference.</h4>
+        </div>
+        <div class="list-content">
+            <ul>
+                <li><a href="#">Active Directory and LDAP integration</a>></li>
+                <li>Full disk encryption</li>
+                <li>Security updates for the<a href="#"> full open source stack</a></li>
+                <li><a href="#">Estate</a>monitoring and management</li>
+                <li>Full stack support for<a href="#">apps, Kubernetes,</a>and<a href="#">OS</a></li>
+            </ul>
+            <ul>
+                <li>Configuration lockdown</li>
+                <li>Local Kubernetes for offline development</li>
+                <li>Instant Ubuntu on Windows and macOS with<a href="#"> WSL</a>and<a href="#"> Multipass</a></li>
+                <li>Containerisation and cloud-native migration service</li>
+                <li>Pluggable <a href="#">CNIs, CSIs, CRIs and third-party tools</a></li>
+            </ul>
+        </div>
+        <div class="list-links">
+            <a href="#">Learn more ›</a>
+            <a href="#">Contact us ›</a>
+        </div>
+        <div class="wrapper-logos">
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/11814428-hp-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/c70b529e-lenovo-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/67f81bfe-intel-new-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/cd765ccc-nvidia-logo.png" />
+            </div>
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/6079d02b-amd-logo.png" />
+            </div>
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/987acdaa-dell-logo.png" />
+            </div>
+        </div>
+    </div>
+    <div class="significat-wrpapper">
+        <div class="wrapper-open-source">
+            <div class="inner-container">
+                <span>Data centre automation</span>
+                <h4>Turn a rack into a bare metal cloud.<a href="#">Metal-as-a-Service provisions</a>Windows, ESXi and
+                    Linux.</h4>
+            </div>
+            <div class="list-content">
+                <ul>
+                    <li><a href="#">Bare metal cloud</a>with on-demand servers</li>
+                    <li>Remote edge cluster operations</li>
+                    <li>Infrastructure<a href="#">monitoring</a>and discovery</li>
+                    <li>Ansible, Chef, Puppet, SALT, <a href="#"> Juju</a>integration</li>
+                    <li><a href="#">Super fast install</a>from scratch</li>
+                </ul>
+                <ul>
+                    <li>VMWare ESXi, Windows, CentOS, RHEL, Ubuntu</li>
+                    <li>Custom images with pre-installed apps</li>
+                    <li><a href="#">Disk</a>and<a href="#"> network</a>configuration</li>
+                    <li>API-driven DHCP, DNS, PXE, IPAM, provisioning</li>
+                    <li>LDAP authentication and RBA</li>
+                </ul>
+            </div>
+            <div class="list-links">
+                <a href="#">Learn more › </a>
+                <a href="#">Contact us ›</a>
+            </div>
+        </div>
+        <div class="wrapper-logos">
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/0352e974-verizon-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/ea3bc2f7-telefonica-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/ce15a4d1-tele2-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/756e9ef4-telecom-italia-logo.png" />
+            </div>
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/83fb74ae-nec-logo.png" />
+            </div>
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/4af3ad39-barclays-logo.png" />
+            </div>
+        </div>
+    </div>
+    <div class="wrapper-open-source">
+        <div class="inner-container">
+            <span>Smart robots of all shapes and sizes</span>
+            <h4>From turtles to trucks, <a href="#">Ubuntu drives the robot revolution.</a></h4>
+        </div>
+        <div class="list-content">
+            <ul>
+                <li>Full support for<a href="#"> ROS and ROS2</a>></li>
+                <li>Security patches for long-term ROS</li>
+                <li>Fault tolerant over-the-air updates</a></li>
+                <li><a href="#">CIS certification</a> for ROS and ROS2</li>
+            </ul>
+            <ul>
+                <li>Trim time-to-market with SMART START consulting</li>
+                <li>Leading Robot-as-a-Platform ecosystem</li>
+                <li>Curated app stores</li>
+            </ul>
+        </div>
+        <div class="list-links">
+            <a href="#">Learn more ›</a>
+            <a href="#">Contact us ›</a>
+        </div>
+        <div class="wrapper-logos">
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/e796fb76-abb-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/2437987f-pal-robotics-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/01e8486f-kuka-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/7e4f929b-apollo-logo.png" />
+            </div>
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/466c2690-bosch-logo.png" />
+            </div>
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/59af2c8f-bmw-logo.png" />
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="wrapper-open-source">
+        <div class="inner-container">
+            <span>Multi-cloud applications – beyond PAAS</span>
+            <h4><a href="#">Universal model-driven operators for classic </a>and<a href="#">Kubernetes estate.</a></h4>
+        </div>
+        <div class="list-content">
+            <ul>
+                <li>Operate smoothly across public and private cloud</li>
+                <li>Reusable integration code as open source packages</li>
+                <li>Python Operator Framework for rapid development</li>
+            </ul>
+            <ul>
+                <li>Bring the K8s operator pattern to classic workloads</li>
+                <li>Lifecycle management and Day 2 operations</li>
+                <li><a href="#"> Open collection</a>of community-driven operators</li>
+                <li>Containerisation and cloud-native migration service</li>
+                <li>Pluggable <a href="#">CNIs, CSIs, CRIs and third-party tools</a></li>
+            </ul>
+        </div>
+        <div class="list-links">
+            <a href="#">Learn more about universal operators</a>
+        </div>
+        <div class="wrapper-logos">
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/1dc7af1e-panasonic-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/52e19575-scania-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/6a3b49ef-sbi-bits-logo.png" />
+            </div>
+
+            <div class="log-section">
+                <img
+                    src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_288,h_288/https://assets.ubuntu.com/v1/de8ab04f-swissquote-logo.png" />
+            </div>
+        </div>
+    </div>
+    <div class="bottom-line">
+        <hr>
+    </div>
+    <div class="sec">
+        <div class="ubuntu-footer">
+            <div class="footer-sections">
+                <div class="container-footer">
+                    <ul>
+                        <span>OpenStack</span>
+                        <li>What is OpenStack</li>
+                        <li>Features</li>
+                        <li>Managed</li>
+                        <li>Consulting</li>
+                        <li>Compare</li>
+                        <li>Cost calculator</li>
+                        <li>Install</li>
+                        <li>Docs</li>
+                        <li>Tutorials</li>
+                        <li>Support</li>
+                    </ul>
+                    <ul>
+                        <span>Ceph</span>
+                        <li>What is Ceph</li>
+                        <li>Managed</li>
+                        <li>Consulting</li>
+                        <li>Consulting</li>
+                        <li>Docs</li>
+                        <li>Install</li>
+                    </ul>
+                    <ul>
+                        <span>Managed</span>
+                        <li>OpenStack</li>
+                        <li>Kubernetes</li>
+                        <li>Ceph</li>
+                        <li>Apps</li>
+                        <li>Observability</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-sections">
+                <div class="container-footer">
+                    <ul>
+                        <span>Kubernetes</span>
+                        <li>What is Kubernetes</li>
+                        <li>Charmed Kubernetes</li>
+                        <li>Compare</li>
+                        <li>Managed</li>
+                        <li>Install</li>
+                        <li>Docs</li>
+                        <li>Resources</li>
+                    </ul>
+                    <ul>
+                        <span>AI / ML</span>
+                        <li>What is Kubeflow</li>
+                        <li>Services</li>
+                    </ul>
+                    <ul>
+                        <span>Robotics</span>
+                        <li>ROS ESM</li>
+                        <li>What is ROS</li>
+                        <li>Community</li>
+                    </ul>
+                    <ul>
+                        <span>Cloud</span>
+                        <li>What is private cloud</li>
+                        <li>What is hybrid cloud</li>
+                        <li>What is multi-cloud</li>
+                        <li>Public cloud</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-sections">
+                <div class="container-footer">
+                    <ul>
+                        <span>IoT</span>
+                        <li>Smart displays</li>
+                        <li>Gateways</li>
+                        <li>App store</li>
+                        <li>Embedded Linux</li>
+                        <li>Automotive</li>
+                        <li>EdgeX</li>
+                        <li>Networking</li>
+                        <li>Smart city</li>
+                        <li>Management</li>
+                    </ul>
+                    <ul>
+                        <span>Raspberry Pi</span>
+                        <li>Desktop</li>
+                        <li>Server</li>
+                    </ul>
+                    <ul>
+                        <span>Core</span>
+                        <li>Docs</li>
+                        <li>Tutorials</li>
+                        <li>Features</li>
+                        <li>Success stories</li>
+                        <li>Consulting</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-sections">
+                <div class="container-footer">
+                    <ul>
+                        <span>Desktop</span>
+                        <li>Features</li>
+                        <li>Organisations</li>
+                        <li>Developers</li>
+                        <li>Flavours</li>
+                        <li>Partners</li>
+                    </ul>
+                    <ul>
+                        <span>Server</span>
+                        <li>Docs</li>
+                    </ul>
+                    <ul>
+                        <span>Security</span>
+                        <li>ESM</li>
+                        <li>Livepatch</li>
+                        <li>Certifications & Hardening</li>
+                        <li>CVEs</li>
+                        <li>Notices</li>
+                        <li>OVAL</li>
+                        <li>Docker Images</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-sections">
+                <div class="container-footer">
+                    <ul>
+                        <span>Downloads</span>
+                        <li>WCloud</li>
+                        <li>IoT</li>
+                        <li>Raspberry Pi</li>
+                        <li>Server</li>
+                        <li>Desktop</li>
+                        <li>AMD-Xilinx</li>
+                        <li>Alternative downloads</li>
+                    </ul>
+                    <ul>
+                        <span>Observability</span>
+                        <li>What is observability</li>
+                        <li>Managed</li>
+                    </ul>
+                    <ul>
+                        <span>Appliance</span>
+                        <li>About</li>
+                        <li>Portfolio</li>
+                        <li>Community</li>
+                        <li>Hardware</li>
+                        <li>Virtual machines</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-sections">
+                <div class="container-footer">
+                    <ul>
+                        <span>Support</span>
+                        <li>Your subscriptions</li>
+                        <li>Account users</li>
+                        <li>Community support</li>
+                    </ul>
+                    <ul>
+                        <span>Pricing</span>
+                        <li>Support</li>
+                        <li>Consulting</li>
+                        <li>Devices</li>
+                    </ul>
+                    <ul>
+                        <span>Sectors</span>
+                        <li>Industrial</li>
+                        <li>Government</li>
+                        <li>Telco</li>
+                        <li>Finance</li>
+                    </ul>
+                    <ul>
+                        <span>Containers</span>
+                        <li>Tutorials</li>
+                        <li>16-04</li>
+                        <li>Model-driven operations
+                            Landscape</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-lines">
+        <hr>
+    </div>
 </body>
 
 </html>
