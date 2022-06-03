@@ -405,7 +405,44 @@ a {
 {
     max-width: 10.5rem;
 }
-
+.significat-wrpapper
+{
+    background: #F7F7F7;
+    padding-bottom: 3rem;
+}
+.inner-container p
+{
+    font-size: 16px;
+    font-weight: 100;
+    color: #111;
+}
+.logo-svg
+{
+    position: relative;
+}
+.logo-svg img
+{
+    position: absolute;
+    left: 70%;
+    transform: translateY(-15rem);
+}
+.inner-container a
+{
+    text-decoration: none;
+    color: #06c;
+    font-size: 20px;
+}
+.inner-container h4
+{
+    font-size: 20px;
+    color: #111;
+    font-weight: 300;
+}
+.bottom-line hr
+{
+    background-color: #e95420;
+    height: 0.1875rem;
+}
 @media screen and (max-width: 760px) {
 
 
