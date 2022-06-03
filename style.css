@@ -103,8 +103,19 @@ body {
 }
 
 .nav-right {
-    display: flex;
-    justify-content: space-between;
+    margin-left: 14rem;
+}
+.nav-right .fa
+{
+    color: #f1f1f1;
+    font-size: 1rem;
+    font-weight: 100;
+    margin-left: 0.5rem;
+    margin-top: 0.3rem;
+}
+.left-nav
+{
+    margin-left: 1.8rem;
 }
 
 .nav-right span {
