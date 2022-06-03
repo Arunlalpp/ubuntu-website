@@ -151,3 +151,188 @@ body {
     margin-left: 6rem;
     margin-top: 0.6rem;
 }
+
+.centosuser {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.user-image {
+    display: flex;
+    align-items: center;
+    margin-top: 1.6rem;
+}
+
+.user-image img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.user-image a {
+    font-size: 20.898px;
+    text-decoration: none;
+    color: rgb(0, 102, 204);
+    margin-left: 1rem;
+}
+
+.user-image a:hover {
+    text-decoration: underline;
+}
+
+.modern-eterprise {
+    padding-top: 5rem;
+    display: flex;
+}
+
+.container-content h1 {
+    color: rgb(17, 17, 17);
+    display: block;
+    font-size: 35.651px;
+    font-weight: 100 !important;
+}
+
+.container-content p {
+    font-size: 20.898px;
+    font-weight: 300;
+    line-height: 32px;
+}
+
+.container-content button {
+    background-color: #0e8420;
+    border-color: #0e8420;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    border: none;
+}
+
+.container-logos ul {
+    display: grid;
+    grid-template-columns: 135.3276px 148.3276px 185px;
+    grid-template-rows: 113.259px 109.259px;
+    list-style: none;
+    padding: 0;
+}
+.container-logos ul li img
+{
+    height: 13vh;
+}
+
+.container {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.ubuntu-news h3 {
+    color: #111;
+    font-size: 27.2953px;
+    font-weight: 100;
+    margin: 0;
+}
+
+.ubuntu-news a {
+    color: #06c;
+    text-decoration: none;
+}
+hr{
+    color: #D9D9D9;
+    margin: 5rem 0;
+
+}
+
+.wrapper-conatiner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.wrapper-conatiner p {
+    color: rgba(0, 0, 0, .6);
+    font-size: 0.765625rem;
+    font-weight: 400;
+    line-height: 1rem;
+    margin: 0;
+}
+.wrapper-conatiner h2
+{
+    margin: 0;
+}
+.wrapper-conatiner h2 a {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600 !important;
+    line-height: 1.5rem;
+    margin-bottom: 1.1rem;
+    margin-top: 0;
+    max-width: 40em;
+    padding-top: 0.401rem;
+    color: #06c;
+    text-decoration: none;
+    margin: 0;
+}
+.wrapper-conatiner h2 a:hover
+{
+    text-decoration: underline;
+}
+.hr 
+{
+    border-left: 1px solid #D9D9D9;
+}
+.container-energies
+{
+    width: 100%;
+    background: #F7F7F7;
+    margin-top: 4rem;
+}
+.container-cardbox
+{
+    max-width: 70%;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.better-security h1
+{
+    font-size: 2.2281872349rem;
+    line-height: 3rem;
+    margin-bottom: 0.8rem;
+    padding-top: 0.201rem;
+    font-weight: 100;
+    color: #111;
+}
+.better-security p
+{
+    font-size: 1.306122449rem;
+    line-height: 2rem;
+    margin-bottom: 0.95rem;
+    padding-top: 0.051rem;
+}
+.better-security h4
+{
+    font-size: 16px;
+    color: #111;
+    font-weight: 100;
+}
+.text-links a
+{
+    color: #06c;
+    text-decoration: none;
+}
+.container-left
+{
+    top: 30%;
+}
+@media screen and (max-width: 760px){
+
+
+    .wrapper-conatiner 
+    {
+        flex-direction: column;
+    }
+    
+}
