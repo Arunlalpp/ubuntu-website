@@ -77,7 +77,7 @@ body {
     font-weight: 300;
 }
 
-.ubuntu-nav svg {
+.ubuntu-nav svg.p-navigation__image {
     fill: #fff;
     background: #e95420;
     height: 3.5rem;
@@ -582,6 +582,18 @@ a {
 .mobile-view {
     display: none;
 }
+
+span.down-arrow svg {
+    padding-right: 8px;
+    margin-left:4px;
+    float:right;
+    fill: #fff;
+    width: 1rem;
+    position: relative;
+    top: -15px;
+    right: -20px;
+}
+
 
 @media screen and (max-width: 760px) {
 
